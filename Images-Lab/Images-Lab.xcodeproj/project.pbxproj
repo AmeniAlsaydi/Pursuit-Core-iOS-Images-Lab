@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		B743603D239DA80700A39D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743603C239DA80700A39D3E /* AppDelegate.swift */; };
 		B743603F239DA80700A39D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743603E239DA80700A39D3E /* SceneDelegate.swift */; };
-		B7436041239DA80700A39D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436040239DA80700A39D3E /* ViewController.swift */; };
+		B7436041239DA80700A39D3E /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436040239DA80700A39D3E /* ComicViewController.swift */; };
 		B7436044239DA80700A39D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7436042239DA80700A39D3E /* Main.storyboard */; };
 		B7436046239DA80B00A39D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7436045239DA80B00A39D3E /* Assets.xcassets */; };
 		B7436049239DA80B00A39D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7436047239DA80B00A39D3E /* LaunchScreen.storyboard */; };
+		B7436052239DBD2600A39D3E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436051239DBD2600A39D3E /* NetworkHelper.swift */; };
+		B7436054239DBFA500A39D3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436053239DBFA500A39D3E /* Comic.swift */; };
+		B7436056239DC1DA00A39D3E /* ComicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7436039239DA80700A39D3E /* Images-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Images-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B743603C239DA80700A39D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B743603E239DA80700A39D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7436040239DA80700A39D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7436040239DA80700A39D3E /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		B7436043239DA80700A39D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7436045239DA80B00A39D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7436048239DA80B00A39D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B743604A239DA80B00A39D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7436051239DBD2600A39D3E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		B7436053239DBFA500A39D3E /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		B743603B239DA80700A39D3E /* Images-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				B743603C239DA80700A39D3E /* AppDelegate.swift */,
-				B743603E239DA80700A39D3E /* SceneDelegate.swift */,
-				B7436040239DA80700A39D3E /* ViewController.swift */,
+				B7436050239DBD0000A39D3E /* Comic */,
 				B7436042239DA80700A39D3E /* Main.storyboard */,
+				B743603E239DA80700A39D3E /* SceneDelegate.swift */,
+				B743603C239DA80700A39D3E /* AppDelegate.swift */,
 				B7436045239DA80B00A39D3E /* Assets.xcassets */,
 				B7436047239DA80B00A39D3E /* LaunchScreen.storyboard */,
 				B743604A239DA80B00A39D3E /* Info.plist */,
 			);
 			path = "Images-Lab";
+			sourceTree = "<group>";
+		};
+		B7436050239DBD0000A39D3E /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				B7436040239DA80700A39D3E /* ComicViewController.swift */,
+				B7436051239DBD2600A39D3E /* NetworkHelper.swift */,
+				B7436053239DBFA500A39D3E /* Comic.swift */,
+				B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */,
+			);
+			path = Comic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7436041239DA80700A39D3E /* ViewController.swift in Sources */,
+				B7436052239DBD2600A39D3E /* NetworkHelper.swift in Sources */,
+				B7436041239DA80700A39D3E /* ComicViewController.swift in Sources */,
+				B7436054239DBFA500A39D3E /* Comic.swift in Sources */,
+				B7436056239DC1DA00A39D3E /* ComicAPIClient.swift in Sources */,
 				B743603D239DA80700A39D3E /* AppDelegate.swift in Sources */,
 				B743603F239DA80700A39D3E /* SceneDelegate.swift in Sources */,
 			);
