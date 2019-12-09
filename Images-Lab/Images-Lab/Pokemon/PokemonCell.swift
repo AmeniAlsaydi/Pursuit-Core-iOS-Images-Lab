@@ -11,12 +11,11 @@ import UIKit
 class PokemonCell: UITableViewCell {
     
     @IBOutlet weak var cardImage: UIImageView!
-    @IBOutlet weak var cardName: UILabel!
     
     var card: Card?
     
     func configureCell(for card: Card) {
-        cardName.text = card.name
+        
         let cardImageUrl = card.imageUrl
         
         NetworkHelper.shared.performDataTask(with: cardImageUrl) { (result) in

@@ -30,6 +30,12 @@ class PokemonDetailVC: UIViewController {
         }
         nameLabel.text = theCard.name
         setsLabel.text = "Sets: \(theCard.set)"
+        typesLabel.text = "Types: \(theCard.types?.first ?? " ")"
+        weaknessLabel.text = """
+        Weaknesses:
+            Type: \(theCard.weaknesses?.first?.type ?? "No type")
+            Value: \(theCard.weaknesses?.first?.value ?? "No Value")
+        """
         
         let cardImageUrl = theCard.imageUrlHiRes
         

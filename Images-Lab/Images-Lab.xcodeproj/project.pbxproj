@@ -19,7 +19,6 @@
 		B743605B239E9AD900A39D3E /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743605A239E9AD900A39D3E /* PokemonCell.swift */; };
 		B743605D239E9BCA00A39D3E /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743605C239E9BCA00A39D3E /* PokemonDetailVC.swift */; };
 		B743605F239E9E2F00A39D3E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743605E239E9E2F00A39D3E /* Pokemon.swift */; };
-		B7436061239EA7F600A39D3E /* Pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = B7436060239EA7F600A39D3E /* Pokemon.json */; };
 		B7436063239EAC2700A39D3E /* PokemonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436062239EAC2700A39D3E /* PokemonAPIClient.swift */; };
 		B7436065239EB8E400A39D3E /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436064239EB8E400A39D3E /* PokemonViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		B743605A239E9AD900A39D3E /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		B743605C239E9BCA00A39D3E /* PokemonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		B743605E239E9E2F00A39D3E /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		B7436060239EA7F600A39D3E /* Pokemon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pokemon.json; sourceTree = "<group>"; };
 		B7436062239EAC2700A39D3E /* PokemonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIClient.swift; sourceTree = "<group>"; };
 		B7436064239EB8E400A39D3E /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 				B743605A239E9AD900A39D3E /* PokemonCell.swift */,
 				B7436062239EAC2700A39D3E /* PokemonAPIClient.swift */,
 				B743605E239E9E2F00A39D3E /* Pokemon.swift */,
-				B7436060239EA7F600A39D3E /* Pokemon.json */,
 				B743605C239E9BCA00A39D3E /* PokemonDetailVC.swift */,
 				B7436064239EB8E400A39D3E /* PokemonViewController.swift */,
 			);
@@ -169,7 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7436049239DA80B00A39D3E /* LaunchScreen.storyboard in Resources */,
-				B7436061239EA7F600A39D3E /* Pokemon.json in Resources */,
 				B7436046239DA80B00A39D3E /* Assets.xcassets in Resources */,
 				B7436044239DA80700A39D3E /* Main.storyboard in Resources */,
 			);
