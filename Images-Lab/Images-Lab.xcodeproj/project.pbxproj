@@ -62,6 +62,7 @@
 		B743603B239DA80700A39D3E /* Images-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				B7436051239DBD2600A39D3E /* NetworkHelper.swift */,
 				B7436050239DBD0000A39D3E /* Comic */,
 				B7436042239DA80700A39D3E /* Main.storyboard */,
 				B743603E239DA80700A39D3E /* SceneDelegate.swift */,
@@ -77,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				B7436040239DA80700A39D3E /* ComicViewController.swift */,
-				B7436051239DBD2600A39D3E /* NetworkHelper.swift */,
 				B7436053239DBFA500A39D3E /* Comic.swift */,
 				B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */,
 			);
