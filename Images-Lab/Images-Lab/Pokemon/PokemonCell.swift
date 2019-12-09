@@ -16,7 +16,7 @@ class PokemonCell: UITableViewCell {
     
     func configureCell(for card: Card) {
         
-        let cardImageUrl = card.imageUrl
+        let cardImageUrl = card.imageUrlHiRes
         
         NetworkHelper.shared.performDataTask(with: cardImageUrl) { (result) in
             switch result {

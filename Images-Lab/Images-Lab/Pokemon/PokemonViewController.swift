@@ -64,11 +64,9 @@ class PokemonViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.pokemonCards = cards
                 }
-                
             }
         }
     }
-
 }
 
 extension PokemonViewController: UITableViewDataSource {
@@ -92,7 +90,7 @@ extension PokemonViewController: UITableViewDataSource {
 
 extension PokemonViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 140
         
     }
 }
