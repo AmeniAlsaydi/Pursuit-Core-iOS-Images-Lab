@@ -75,8 +75,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QTk-WO-YDA">
-                                <rect key="frame" x="20" y="241" width="374" height="447"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slowmo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QTk-WO-YDA">
+                                <rect key="frame" x="20" y="240" width="374" height="449"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -138,7 +138,7 @@
         <!--Pokemon-->
         <scene sceneID="4m7-dT-Axd">
             <objects>
-                <viewController id="wXh-pR-ytA" sceneMemberID="viewController">
+                <viewController id="wXh-pR-ytA" customClass="PokemonViewController" customModule="Images_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQu-fS-vk2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="196" width="414" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="Gpf-5H-Kts">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="Gpf-5H-Kts" customClass="PokemonCell" customModule="Images_Lab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gpf-5H-Kts" id="7sC-VH-zYt">
@@ -165,6 +165,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cardImage" destination="u7E-pu-Fyg" id="eVI-Vp-78d"/>
                                             <segue destination="vGL-C4-RKX" kind="presentation" id="GgV-yR-vDx"/>
                                         </connections>
                                     </tableViewCell>
@@ -185,15 +186,18 @@
                         <viewLayoutGuide key="safeArea" id="KCf-mm-RhN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon" id="TTM-IX-MKd"/>
+                    <connections>
+                        <outlet property="tableView" destination="FfY-CK-2qa" id="sPG-R7-cRe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOz-iI-kyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763.7681159420292" y="830.35714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon DetailVC-->
         <scene sceneID="rK2-RE-ZDn">
             <objects>
-                <viewController id="vGL-C4-RKX" sceneMemberID="viewController">
+                <viewController id="vGL-C4-RKX" customClass="PokemonDetailVC" customModule="Images_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJw-jl-pmR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,6 +255,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CR9-hb-wbw"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImage" destination="MUl-PO-lOF" id="Wnc-53-5NN"/>
+                        <outlet property="setsLabel" destination="oTz-Rv-cTC" id="hZZ-x8-RG8"/>
+                        <outlet property="typesLabel" destination="NgZ-5o-bDn" id="l8g-Pn-O3O"/>
+                        <outlet property="weaknessLabel" destination="VVT-0x-dhm" id="IS6-Vc-x8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI9-bj-nsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,6 +348,5 @@
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="slowmo" catalog="system" width="64" height="60"/>
-        <image name="smiley" catalog="system" width="64" height="60"/>
     </resources>
 </document>
