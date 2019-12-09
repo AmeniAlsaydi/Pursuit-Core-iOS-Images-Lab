@@ -9,11 +9,12 @@
 import Foundation
 
 struct ComicAPIClient {
+    
     static func getComic(for num: Int, completion: @escaping (Result<Comic, AppError>)-> ()) {
-    let endpointURLString = "http://xkcd.com/\(num)/info.0.json"
+        let endpointURLString = "https://xkcd.com/\(num)/info.0.json"
         
         NetworkHelper.shared.performDataTask(with: endpointURLString) { (result) in
-                        switch result {
+            switch result {
             case .failure(let appError):
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
@@ -26,7 +27,7 @@ struct ComicAPIClient {
                     
                 }
             }
-
+            
         }
     }
 }
