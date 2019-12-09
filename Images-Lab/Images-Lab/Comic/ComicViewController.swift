@@ -13,11 +13,13 @@ class ComicViewController: UIViewController {
     @IBOutlet weak var comicImage: UIImageView!
     @IBOutlet weak var comicTitle: UILabel!
     @IBOutlet weak var stepperControl: UIStepper!
+    @IBOutlet weak var textField: UITextField!
     
     var comicNumber = 2238 {
         didSet {
             loadComic(for: comicNumber)
             stepperControl.value = Double(comicNumber)
+            textField.text = comicNumber.description
             
         }
     }
@@ -26,6 +28,7 @@ class ComicViewController: UIViewController {
         super.viewDidLoad()
         loadComic(for: comicNumber)
         configureStepper()
+        textField.delegate = self
     }
     
     func configureStepper() {
@@ -46,7 +49,6 @@ class ComicViewController: UIViewController {
                 print("appError: \(appError)")
             case .success(let comic):
                 imageURL = comic.img
-                print("title: \(comic.num)")
                 
                 DispatchQueue.main.async {
                     
@@ -73,7 +75,6 @@ class ComicViewController: UIViewController {
     @IBAction func randomButtonPressed(_ sender: UIButton) {
         // The "Random" button should go to a random comic.
         comicNumber = Int.random(in: 1...2238)
-        // loadComic(for: randomNumber)
     }
     
     @IBAction func recentButtonPressed(_ sender: UIButton) {
@@ -87,7 +88,46 @@ class ComicViewController: UIViewController {
         
     }
     
-    
+}
+
+extension ComicViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        comicNumber = Int(textField.text ?? "1") ?? 1
+        textField.resignFirstResponder()
+        return true
+    }
     
 }
 
+
+@IBDesignable extension UIButton {
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+}

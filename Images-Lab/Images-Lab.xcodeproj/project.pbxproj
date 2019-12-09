@@ -16,7 +16,6 @@
 		B7436052239DBD2600A39D3E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436051239DBD2600A39D3E /* NetworkHelper.swift */; };
 		B7436054239DBFA500A39D3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436053239DBFA500A39D3E /* Comic.swift */; };
 		B7436056239DC1DA00A39D3E /* ComicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */; };
-		B7436058239DD25900A39D3E /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436057239DD25900A39D3E /* ImageClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		B7436051239DBD2600A39D3E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		B7436053239DBFA500A39D3E /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicAPIClient.swift; sourceTree = "<group>"; };
-		B7436057239DD25900A39D3E /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				B7436040239DA80700A39D3E /* ComicViewController.swift */,
-				B7436057239DD25900A39D3E /* ImageClient.swift */,
 				B7436051239DBD2600A39D3E /* NetworkHelper.swift */,
 				B7436053239DBFA500A39D3E /* Comic.swift */,
 				B7436055239DC1DA00A39D3E /* ComicAPIClient.swift */,
@@ -164,7 +161,6 @@
 				B7436056239DC1DA00A39D3E /* ComicAPIClient.swift in Sources */,
 				B743603D239DA80700A39D3E /* AppDelegate.swift in Sources */,
 				B743603F239DA80700A39D3E /* SceneDelegate.swift in Sources */,
-				B7436058239DD25900A39D3E /* ImageClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
