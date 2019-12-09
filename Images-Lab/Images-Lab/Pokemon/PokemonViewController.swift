@@ -11,6 +11,7 @@ import UIKit
 class PokemonViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var pokemonCards = [Card]() {
         didSet {
@@ -18,10 +19,29 @@ class PokemonViewController: UIViewController {
         }
     }
     
+    var searchQuery = "" {
+        didSet {
+            PokemonAPIClient.getCards { (result) in
+                switch result {
+                case .failure(let appError):
+                    print("appError: \(appError)")
+                    
+                case .success(let cards):
+                    DispatchQueue.main.async {
+                        self.pokemonCards = cards.filter{$0.name.lowercased().contains(self.searchQuery.lowercased())}
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        searchBar.delegate = self
         loadCards()
         
     }
@@ -75,7 +95,19 @@ extension PokemonViewController: UITableViewDelegate {
         return 160
         
     }
-    
-   
 }
 
+extension PokemonViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+          searchBar.resignFirstResponder()
+      }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+         guard !searchText.isEmpty else {
+                   loadCards()
+                   return
+               }
+               searchQuery = searchText
+    }
+    
+}
