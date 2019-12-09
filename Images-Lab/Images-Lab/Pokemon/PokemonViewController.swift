@@ -21,6 +21,8 @@ class PokemonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
+        loadCards()
         
     }
     
@@ -31,7 +33,10 @@ class PokemonViewController: UIViewController {
                 print("appError: \(appError)")
                 
             case .success(let cards):
-                self.pokemonCards = cards
+                DispatchQueue.main.async {
+                    self.pokemonCards = cards
+                }
+                
             }
         }
     }
@@ -44,10 +49,25 @@ extension PokemonViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath) as? PokemonCell else {
+            fatalError("issue with cell")
+        }
         
+        let pokemonCard = pokemonCards[indexPath.row]
+        
+        cell.configureCell(for: pokemonCard)
         return cell
     }
     
     
 }
+
+extension PokemonViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+        
+    }
+    
+   
+}
+

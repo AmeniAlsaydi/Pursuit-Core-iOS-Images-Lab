@@ -151,21 +151,36 @@
                                 <rect key="frame" x="0.0" y="196" width="414" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="Gpf-5H-Kts" customClass="PokemonCell" customModule="Images_Lab" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pokemonCell" rowHeight="175" id="Gpf-5H-Kts" customClass="PokemonCell" customModule="Images_Lab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gpf-5H-Kts" id="7sC-VH-zYt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-pu-Fyg">
-                                                    <rect key="frame" x="20" y="23" width="98" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-pu-Fyg">
+                                                    <rect key="frame" x="28" y="22.5" width="100" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="cR3-fL-Gba"/>
+                                                        <constraint firstAttribute="height" constant="130" id="rOZ-pO-TFr"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-W5-dXF">
+                                                    <rect key="frame" x="141" y="23" width="253" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="u7E-pu-Fyg" firstAttribute="centerY" secondItem="7sC-VH-zYt" secondAttribute="centerY" id="4BW-u8-CTZ"/>
+                                                <constraint firstItem="u7E-pu-Fyg" firstAttribute="leading" secondItem="7sC-VH-zYt" secondAttribute="leadingMargin" constant="8" id="MO7-1x-ee0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cardImage" destination="u7E-pu-Fyg" id="eVI-Vp-78d"/>
+                                            <outlet property="cardName" destination="ea3-W5-dXF" id="8PE-go-67p"/>
                                             <segue destination="vGL-C4-RKX" kind="presentation" id="GgV-yR-vDx"/>
                                         </connections>
                                     </tableViewCell>

@@ -16,12 +16,12 @@ struct Card: Decodable {
     let name: String
     let imageUrl: String
     let imageUrlHiRes: String
-    let types: [String]
-    let set: [String]
-    let weaknesses: Weakness
+    //let types: [String]
+    let set: String
+    //let weaknesses: [Weakness]
 }
 
-struct Weakness: Decodable {
-    let type: String
-    let value: String
-}
+//struct Weakness: Decodable {
+//    let type: String
+//    let value: String
+//}
