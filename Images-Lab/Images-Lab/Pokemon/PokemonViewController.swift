@@ -26,6 +26,14 @@ class PokemonViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? PokemonDetailVC, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not located detailVC or indexpath")
+        }
+        
+        detailVC.card = pokemonCards[indexPath.row]
+    }
+    
     func loadCards() {
         PokemonAPIClient.getCards { (result) in
             switch result {

@@ -272,8 +272,9 @@
                     </view>
                     <connections>
                         <outlet property="cardImage" destination="MUl-PO-lOF" id="Wnc-53-5NN"/>
+                        <outlet property="nameLabel" destination="NgZ-5o-bDn" id="wHF-yj-wdm"/>
                         <outlet property="setsLabel" destination="oTz-Rv-cTC" id="hZZ-x8-RG8"/>
-                        <outlet property="typesLabel" destination="NgZ-5o-bDn" id="l8g-Pn-O3O"/>
+                        <outlet property="typesLabel" destination="yfT-NZ-owm" id="FTd-KU-Crg"/>
                         <outlet property="weaknessLabel" destination="VVT-0x-dhm" id="IS6-Vc-x8B"/>
                     </connections>
                 </viewController>

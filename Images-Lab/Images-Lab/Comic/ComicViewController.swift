@@ -32,7 +32,6 @@ class ComicViewController: UIViewController {
     }
     
     
-    
     func configureStepper() {
         stepperControl.minimumValue = 1.0
         stepperControl.maximumValue = 2238.0
