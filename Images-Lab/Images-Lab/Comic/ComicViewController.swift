@@ -13,42 +13,53 @@ class ComicViewController: UIViewController {
     @IBOutlet weak var comicImage: UIImageView!
     @IBOutlet weak var comicTitle: UILabel!
     
-    var comicNumber = 614
-    var range = 1...200
-    // var randomNumber = range.randomElement()
+    var comicNumber = 2238
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        loadComic(for: comicNumber)
     }
     
     func loadComic(for comicNumber: Int){
+        
+        var imageURL = "" 
+        
         ComicAPIClient.getComic(for: comicNumber) { (result) in
             switch result {
             case .failure(let appError):
                 print("appError: \(appError)")
             case .success(let comic):
+                imageURL = comic.img
                 print("title: \(comic.num)")
                 
                 DispatchQueue.main.async {
-                    // any ui we need to be done should happen in this clousre
-
+                    
                     self.comicTitle.text = comic.title
+                    NetworkHelper.shared.performDataTask(with: imageURL) { (result) in
+                        switch result {
+                        case .failure(let appError):
+                            print("appError: \(appError)")
+                        case .success(let data):
+                            let image = UIImage(data: data)
+                            
+                            DispatchQueue.main.async {
+                                self.comicImage.image = image
+                            }
+                            
+                        }
+                    }
+                    
                 }
-                
             }
         }
     }
     
-    
     @IBAction func randomButtonPressed(_ sender: UIButton) {
         // The "Random" button should go to a random comic.
+        let randomNumber = Int.random(in: 1...2238)
         
-        
-        
-        
+        loadComic(for: randomNumber)
+  
     }
     
     
@@ -58,6 +69,6 @@ class ComicViewController: UIViewController {
         
     }
     
-
+    
 }
 
