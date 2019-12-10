@@ -17,6 +17,7 @@ struct User: Codable {
     let email: String
     let dob: DateInfo
     let phone: String
+    let cell: String 
     let location: AddressInfo
     let picture: picInfo
     

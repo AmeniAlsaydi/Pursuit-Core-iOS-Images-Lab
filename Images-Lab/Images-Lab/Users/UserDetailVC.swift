@@ -29,6 +29,19 @@ class UserDetailVC: UIViewController {
     
     func updateUI() {
         
+        guard let theUser = user else {
+            fatalError("issue with segue")
+        }
+        let address = "\(theUser.location.street.number) \(theUser.location.street.name) \(theUser.location.city), \(theUser.location.state) \(theUser.location.country)"
+        let name = "\(theUser.name.first) \(theUser.name.last)"
+        
+        nameLabel.text = name
+        ageLabel.text = "Age: \(theUser.dob.age)"
+        phoneLabel.text = "Phone: \(theUser.phone)"
+        addressLabel.text = "Address: \(address)"
+        cellLabel.text = "Cell: \(theUser.cell)"
+        
+        
     }
     
 

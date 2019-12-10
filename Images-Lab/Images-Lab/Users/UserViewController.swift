@@ -25,21 +25,29 @@ class UserViewController: UIViewController {
         loadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? UserDetailVC, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("couldnt get detailVC or indexPath")
+        }
+        
+        detailVC.user = users[indexPath.row]
+    }
+    
     func loadData() {
         UserAPIClient.getUsers { (result) in
-               switch result {
-                     case .failure(let appError):
-                         print("appError: \(appError)")
-                         
-                     case .success(let users):
-                         DispatchQueue.main.async {
-                             self.users = users
-                         }
-                     }
+            switch result {
+            case .failure(let appError):
+                print("appError: \(appError)")
+                
+            case .success(let users):
+                DispatchQueue.main.async {
+                    self.users = users
+                }
+            }
         }
     }
     
-
+    
 }
 
 extension UserViewController: UITableViewDataSource {
