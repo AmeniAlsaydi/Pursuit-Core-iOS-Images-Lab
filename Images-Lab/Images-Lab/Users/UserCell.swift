@@ -19,25 +19,26 @@ class UserCell: UITableViewCell {
     
     func configureCell(for user: User) {
         
-        let thumbnailImage = user.picture.thumbnail
+        
         
         nameLabel.text = user.name.first
         ageLabel.text = user.dob.age.description
         phoneLabel.text = user.phone
         
-//        NetworkHelper.shared.performDataTask(with: thumbnailImage) { (result) in
-//            switch result {
-//            case .failure(let appError):
-//                print("appError: \(appError)")
-//            case .success(let data):
-//                let image = UIImage(data: data)
-//                
-//                DispatchQueue.main.async {
-//                    self.userImage.image = image
-//                }
-//                
-//            }
-//        }
+        let thumbnailImage = user.picture.thumbnail
+        NetworkHelper.shared.performDataTask(with: thumbnailImage) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("appError: \(appError)")
+            case .success(let data):
+                let image = UIImage(data: data)
+
+                DispatchQueue.main.async {
+                    self.userImage?.image = image // is not displaying image
+                }
+
+            }
+        }
 
         
     }

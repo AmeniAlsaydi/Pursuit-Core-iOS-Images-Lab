@@ -25,6 +25,7 @@
 		B74B3E90239F113A0022CF51 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E8F239F113A0022CF51 /* UserCell.swift */; };
 		B74B3E92239F2F7D0022CF51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E91239F2F7D0022CF51 /* User.swift */; };
 		B74B3E94239F303D0022CF51 /* UserAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E93239F303D0022CF51 /* UserAPIClient.swift */; };
+		B74B3E98239F46310022CF51 /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E97239F46310022CF51 /* UserDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B74B3E8F239F113A0022CF51 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B74B3E91239F2F7D0022CF51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B74B3E93239F303D0022CF51 /* UserAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIClient.swift; sourceTree = "<group>"; };
+		B74B3E97239F46310022CF51 /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				B74B3E8F239F113A0022CF51 /* UserCell.swift */,
 				B74B3E91239F2F7D0022CF51 /* User.swift */,
 				B74B3E93239F303D0022CF51 /* UserAPIClient.swift */,
+				B74B3E97239F46310022CF51 /* UserDetailVC.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7436052239DBD2600A39D3E /* NetworkHelper.swift in Sources */,
+				B74B3E98239F46310022CF51 /* UserDetailVC.swift in Sources */,
 				B74B3E90239F113A0022CF51 /* UserCell.swift in Sources */,
 				B74B3E8E239F10DA0022CF51 /* UserViewController.swift in Sources */,
 				B7436041239DA80700A39D3E /* ComicViewController.swift in Sources */,
