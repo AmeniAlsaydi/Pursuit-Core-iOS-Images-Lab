@@ -23,6 +23,8 @@
 		B7436065239EB8E400A39D3E /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7436064239EB8E400A39D3E /* PokemonViewController.swift */; };
 		B74B3E8E239F10DA0022CF51 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E8D239F10DA0022CF51 /* UserViewController.swift */; };
 		B74B3E90239F113A0022CF51 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E8F239F113A0022CF51 /* UserCell.swift */; };
+		B74B3E92239F2F7D0022CF51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E91239F2F7D0022CF51 /* User.swift */; };
+		B74B3E94239F303D0022CF51 /* UserAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B3E93239F303D0022CF51 /* UserAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		B7436064239EB8E400A39D3E /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		B74B3E8D239F10DA0022CF51 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B74B3E8F239F113A0022CF51 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B74B3E91239F2F7D0022CF51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B74B3E93239F303D0022CF51 /* UserAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				B74B3E8D239F10DA0022CF51 /* UserViewController.swift */,
 				B74B3E8F239F113A0022CF51 /* UserCell.swift */,
+				B74B3E91239F2F7D0022CF51 /* User.swift */,
+				B74B3E93239F303D0022CF51 /* UserAPIClient.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 				B7436041239DA80700A39D3E /* ComicViewController.swift in Sources */,
 				B7436065239EB8E400A39D3E /* PokemonViewController.swift in Sources */,
 				B7436054239DBFA500A39D3E /* Comic.swift in Sources */,
+				B74B3E92239F2F7D0022CF51 /* User.swift in Sources */,
+				B74B3E94239F303D0022CF51 /* UserAPIClient.swift in Sources */,
 				B7436056239DC1DA00A39D3E /* ComicAPIClient.swift in Sources */,
 				B743603D239DA80700A39D3E /* AppDelegate.swift in Sources */,
 				B743605B239E9AD900A39D3E /* PokemonCell.swift in Sources */,

@@ -339,43 +339,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-w0-uCG">
-                                                    <rect key="frame" x="10" y="13" width="120" height="120"/>
+                                                    <rect key="frame" x="8" y="13" width="120" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="1Wf-pB-QT8"/>
-                                                        <constraint firstAttribute="width" constant="120" id="s0z-2E-0mJ"/>
+                                                        <constraint firstAttribute="width" constant="120" id="A2h-23-MGU"/>
+                                                        <constraint firstAttribute="height" constant="120" id="XBD-32-Pb1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7a-2n-4xZ">
-                                                    <rect key="frame" x="138" y="13" width="264" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7a-2n-4xZ">
+                                                    <rect key="frame" x="136" y="13" width="270" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwl-c7-PBD">
-                                                    <rect key="frame" x="138" y="42" width="268" height="18"/>
+                                                    <rect key="frame" x="136" y="42" width="270" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNm-9a-ULp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNm-9a-ULp">
                                                     <rect key="frame" x="138" y="117" width="268" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dwl-c7-PBD" firstAttribute="leading" secondItem="VX1-w0-uCG" secondAttribute="trailing" constant="8" id="9QF-tk-obZ"/>
-                                                <constraint firstItem="VX1-w0-uCG" firstAttribute="leading" secondItem="RRn-PI-m3L" secondAttribute="leading" constant="10" id="D4X-5T-nkQ"/>
-                                                <constraint firstItem="I7a-2n-4xZ" firstAttribute="leading" secondItem="VX1-w0-uCG" secondAttribute="trailing" constant="8" id="QEW-xO-MqZ"/>
-                                                <constraint firstItem="dwl-c7-PBD" firstAttribute="top" secondItem="I7a-2n-4xZ" secondAttribute="bottom" constant="8" id="Rk5-LX-xk0"/>
-                                                <constraint firstAttribute="trailing" secondItem="dwl-c7-PBD" secondAttribute="trailing" constant="8" id="Rv3-Rq-tV6"/>
-                                                <constraint firstItem="MNm-9a-ULp" firstAttribute="bottom" secondItem="VX1-w0-uCG" secondAttribute="bottom" id="Vpe-vk-O9i"/>
-                                                <constraint firstItem="MNm-9a-ULp" firstAttribute="leading" secondItem="VX1-w0-uCG" secondAttribute="trailing" constant="8" id="XXi-SZ-o0A"/>
-                                                <constraint firstItem="VX1-w0-uCG" firstAttribute="centerY" secondItem="RRn-PI-m3L" secondAttribute="centerY" id="eHC-FK-qtb"/>
-                                                <constraint firstAttribute="trailing" secondItem="MNm-9a-ULp" secondAttribute="trailing" constant="8" id="eY2-eV-Ubj"/>
-                                                <constraint firstItem="I7a-2n-4xZ" firstAttribute="trailing" secondItem="RRn-PI-m3L" secondAttribute="trailingMargin" constant="8" id="h9a-Gm-7je"/>
-                                                <constraint firstItem="I7a-2n-4xZ" firstAttribute="top" secondItem="VX1-w0-uCG" secondAttribute="top" id="rw1-Rw-zCq"/>
+                                                <constraint firstItem="dwl-c7-PBD" firstAttribute="leading" secondItem="VX1-w0-uCG" secondAttribute="trailing" constant="8" id="2UA-AO-jSc"/>
+                                                <constraint firstItem="VX1-w0-uCG" firstAttribute="centerY" secondItem="RRn-PI-m3L" secondAttribute="centerY" id="3z5-cK-mYq"/>
+                                                <constraint firstItem="dwl-c7-PBD" firstAttribute="top" secondItem="I7a-2n-4xZ" secondAttribute="bottom" constant="8" id="NKX-wJ-8Gz"/>
+                                                <constraint firstItem="I7a-2n-4xZ" firstAttribute="top" secondItem="VX1-w0-uCG" secondAttribute="top" id="aXL-5x-ijK"/>
+                                                <constraint firstItem="I7a-2n-4xZ" firstAttribute="leading" secondItem="VX1-w0-uCG" secondAttribute="trailing" constant="8" id="lrW-Ae-pzs"/>
+                                                <constraint firstAttribute="trailing" secondItem="I7a-2n-4xZ" secondAttribute="trailing" constant="8" id="mwd-v8-81O"/>
+                                                <constraint firstAttribute="trailing" secondItem="dwl-c7-PBD" secondAttribute="trailing" constant="8" id="tBW-i3-FiG"/>
+                                                <constraint firstItem="VX1-w0-uCG" firstAttribute="leading" secondItem="RRn-PI-m3L" secondAttribute="leading" constant="8" id="xgJ-Ny-dIn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
