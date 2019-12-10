@@ -13,19 +13,16 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
-    
-    var user: User?
+
     
     func configureCell(for user: User) {
-        
-        
         
         nameLabel.text = user.name.first
         ageLabel.text = user.dob.age.description
         phoneLabel.text = user.phone
         
         let thumbnailImage = user.picture.thumbnail
+    
         NetworkHelper.shared.performDataTask(with: thumbnailImage) { (result) in
             switch result {
             case .failure(let appError):
@@ -39,6 +36,22 @@ class UserCell: UITableViewCell {
 
             }
         }
+        
+//        let imageURL = theUser.picture.large
+//
+//               NetworkHelper.shared.performDataTask(with: imageURL) { (result) in
+//                   switch result {
+//                   case .failure(let appError):
+//                       print("appError: \(appError)")
+//                   case .success(let data):
+//                       let image = UIImage(data: data)
+//
+//                       DispatchQueue.main.async {
+//                           self.imageView?.image = image
+//                       }
+//
+//                   }
+//               }
 
         
     }
