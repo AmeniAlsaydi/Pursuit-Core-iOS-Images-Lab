@@ -339,27 +339,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-w0-uCG">
-                                                    <rect key="frame" x="8" y="14.5" width="120" height="117.5"/>
+                                                    <rect key="frame" x="8" y="24.5" width="100" height="97.5"/>
                                                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="A2h-23-MGU"/>
-                                                        <constraint firstAttribute="height" constant="120" id="XBD-32-Pb1"/>
+                                                        <constraint firstAttribute="width" constant="100" id="A2h-23-MGU"/>
+                                                        <constraint firstAttribute="height" constant="100" id="XBD-32-Pb1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7a-2n-4xZ">
-                                                    <rect key="frame" x="136" y="35" width="270" height="21"/>
+                                                    <rect key="frame" x="116" y="35" width="290" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwl-c7-PBD">
-                                                    <rect key="frame" x="136" y="64" width="270" height="18"/>
+                                                    <rect key="frame" x="116" y="64" width="290" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNm-9a-ULp">
-                                                    <rect key="frame" x="136" y="117" width="270" height="16"/>
+                                                    <rect key="frame" x="116" y="107" width="290" height="16"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -381,9 +381,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ageLabel" destination="dwl-c7-PBD" id="b4i-ki-hdr"/>
-                                            <outlet property="imageView" destination="VX1-w0-uCG" id="Y9Q-eK-RZn"/>
                                             <outlet property="nameLabel" destination="I7a-2n-4xZ" id="WpO-Gw-xOT"/>
                                             <outlet property="phoneLabel" destination="MNm-9a-ULp" id="XQB-vf-pCo"/>
+                                            <outlet property="userImage" destination="VX1-w0-uCG" id="p2K-pq-uqZ"/>
                                             <segue destination="kc8-Ps-IUN" kind="presentation" id="Tdt-wJ-zSj"/>
                                         </connections>
                                     </tableViewCell>

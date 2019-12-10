@@ -9,11 +9,18 @@
 import UIKit
 
 class UserCell: UITableViewCell {
+ 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
 
+    var user: User?
+    
+    override func layoutSubviews() {
+    super.layoutSubviews()
+    userImage.layer.cornerRadius = userImage.frame.size.width/2
+    }
     
     func configureCell(for user: User) {
         
@@ -29,7 +36,10 @@ class UserCell: UITableViewCell {
                 print("appError: \(appError)")
             case .success(let data):
                 let image = UIImage(data: data)
-                    self.userImage?.image = image // is not displaying image
+                DispatchQueue.main.async {
+                    self.userImage.image = image // is not displaying image
+                }
+                    
             }
         }
     }
