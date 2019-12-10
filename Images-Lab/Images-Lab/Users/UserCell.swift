@@ -29,30 +29,8 @@ class UserCell: UITableViewCell {
                 print("appError: \(appError)")
             case .success(let data):
                 let image = UIImage(data: data)
-
-                DispatchQueue.main.async {
                     self.userImage?.image = image // is not displaying image
-                }
-
             }
         }
-        
-//        let imageURL = theUser.picture.large
-//
-//               NetworkHelper.shared.performDataTask(with: imageURL) { (result) in
-//                   switch result {
-//                   case .failure(let appError):
-//                       print("appError: \(appError)")
-//                   case .success(let data):
-//                       let image = UIImage(data: data)
-//
-//                       DispatchQueue.main.async {
-//                           self.imageView?.image = image
-//                       }
-//
-//                   }
-//               }
-
-        
     }
 }
