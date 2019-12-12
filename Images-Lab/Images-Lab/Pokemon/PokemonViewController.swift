@@ -28,7 +28,7 @@ class PokemonViewController: UIViewController {
                     
                 case .success(let cards):
                     DispatchQueue.main.async {
-                        self.pokemonCards = cards.filter{$0.name.lowercased().contains(self.searchQuery.lowercased())}
+                        self.pokemonCards = cards.filter{($0.types?.first?.lowercased() ?? "").contains(self.searchQuery.lowercased())}
                     }
                     
                 }
